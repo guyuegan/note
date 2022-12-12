@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-12-12T09:41:26.471Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="HohOjw5Oc69wrZPIsSF6" version="20.6.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-12-12T10:01:58.599Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="85-Ny3QY1UZdI3b3SIhU" version="20.6.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="企业模式">
-    <mxGraphModel dx="1797" dy="1586" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
+    <mxGraphModel dx="1797" dy="417" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -29,9 +29,6 @@
         </mxCell>
         <mxCell id="jYcGKKyAP8I1KN-inCQs-1" value="端口初始化：企业模式 、运营商模式且首次配置" style="text;whiteSpace=wrap;html=1;fontColor=#FEFAE0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="30" y="10" width="290" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-2" value="&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;interface eth-0-%s&lt;/div&gt;&lt;div&gt;no description&lt;/div&gt;&lt;div&gt;description ？？？ //如果有&lt;/div&gt;&lt;br&gt;&lt;div&gt;no switchport&lt;/div&gt;&lt;div&gt;switchport&lt;/div&gt;&lt;div&gt;no static-channel-group&lt;/div&gt;&lt;div&gt;no channel-group&lt;/div&gt;&lt;br&gt;&lt;div&gt;switchport mode trunk&lt;/div&gt;&lt;div&gt;loopback-detect enable&lt;/div&gt;&lt;div&gt;loopback-detect action shutdown&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FEFAE0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="550" y="-140" width="270" height="330" as="geometry" />
         </mxCell>
         <mxCell id="jYcGKKyAP8I1KN-inCQs-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-3" target="jYcGKKyAP8I1KN-inCQs-9">
           <mxGeometry relative="1" as="geometry" />
@@ -90,10 +87,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-18" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no switchport&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;switchport&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no static-channel-group&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no channel-group&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="370" y="520" width="190" height="80" as="geometry" />
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-18" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;/div&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot; color=&quot;#d4d4d4&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;用户选择的所有&lt;br&gt;物理口初始化&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="400" y="525" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-21" value="链路模式&lt;br&gt;环回口检测" style="whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-21" target="jYcGKKyAP8I1KN-inCQs-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-21" value="端口链路模式&lt;br&gt;环回口检测" style="whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="160" y="680" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="jYcGKKyAP8I1KN-inCQs-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-25" target="jYcGKKyAP8I1KN-inCQs-21">
@@ -101,6 +101,37 @@
         </mxCell>
         <mxCell id="jYcGKKyAP8I1KN-inCQs-25" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;switchport mode trunk&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;loopback-detect enable&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;loopback-detect action shutdown&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-200" y="660" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-27" target="jYcGKKyAP8I1KN-inCQs-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-27" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no switchport&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;switchport&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no static-channel-group&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no channel-group&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="630" y="505" width="190" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-30" target="jYcGKKyAP8I1KN-inCQs-32">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="850" />
+              <mxPoint x="310" y="850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-37" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#FEFAE0;" vertex="1" connectable="0" parent="jYcGKKyAP8I1KN-inCQs-33">
+          <mxGeometry x="-0.2047" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-30" value="企业模式" style="rhombus;whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="180" y="810" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-32" value="配置native vlan" style="whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="360" y="820" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-34" target="jYcGKKyAP8I1KN-inCQs-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-34" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;switchport trunk native vlan 网吧接入vlan&lt;/span&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="630" y="807.5" width="250" height="85" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
