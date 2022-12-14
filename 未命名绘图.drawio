@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-12-12T10:01:58.599Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="85-Ny3QY1UZdI3b3SIhU" version="20.6.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-12-14T01:18:02.040Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="sRGB8Ld9vzMlYVyB-Gfw" version="20.6.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="企业模式">
-    <mxGraphModel dx="1797" dy="417" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
+    <mxGraphModel dx="1974" dy="417" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -121,6 +121,9 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-30" target="jYcGKKyAP8I1KN-inCQs-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="jYcGKKyAP8I1KN-inCQs-30" value="企业模式" style="rhombus;whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="180" y="810" width="80" height="80" as="geometry" />
         </mxCell>
@@ -132,6 +135,9 @@
         </mxCell>
         <mxCell id="jYcGKKyAP8I1KN-inCQs-34" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;switchport trunk native vlan 网吧接入vlan&lt;/span&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="630" y="807.5" width="250" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-39" value="配置trunk permit vlan" style="whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="160" y="980" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
