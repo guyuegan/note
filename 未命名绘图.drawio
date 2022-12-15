@@ -1,66 +1,66 @@
-<mxfile host="app.diagrams.net" modified="2022-12-15T09:32:27.118Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="-69m5K2I22nmFZNZI6DH" version="20.6.2" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2022-12-15T09:49:04.947Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="-j-kneMZmNCVy4j8EIbA" version="20.6.2" type="github" pages="4">
   <diagram id="KCGnJsf7bXrOIoNxbifd" name="portModel">
-    <mxGraphModel dx="733" dy="384" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
+    <mxGraphModel dx="1070" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="TWYUIV37gP8uN4usiFkh-6" value="&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-weight: normal; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div style=&quot;line-height: 19px;&quot;&gt;&lt;div&gt;String &lt;span style=&quot;color: #569cd6;&quot;&gt;portModel&lt;/span&gt; = modelCheckAndGet(model, switchPortBar, room.getRoomId(), sysConfig, barSwflag)&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;modelCheckAndGet(portEnum, switchPortBar, sysConfig, barSwflag) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; switch (portEnum) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; case RECYCLING: // 多通道模式&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // 需要聚合&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (NEED.getType().equals(switchPortBar.getIsAggregation())) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; String[] &lt;span style=&quot;color: #569cd6;&quot;&gt;ports&lt;/span&gt; = switchPortBar.getPortId().split(&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;,&quot;&lt;/span&gt;)&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if ((CORESW || AGGSW) &amp;amp;&amp;amp; ports.length &amp;gt;= 2) { //核心或汇聚 且 选两个以上端口&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return CONVERGE_RECOVER.getDesc()&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (!barSwflag) { //如果不是网吧交换机，直接返回null&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return null&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // 确实配置了带宽回收vlan&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (StringUtils.isNotBlank(switchPortBar.getTransVlanId())) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // 网吧交换机需要选三个及以上端口（一个做带宽回收、其余的做顺网云接入）&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Assert.isTrue(ports.length &amp;gt;= 3, &lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;网吧交换机-链路聚合-带宽回收：需要选择三个及以上的端口！&quot;&lt;/span&gt;)&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Assert.notNull(switchPortBar.getInternetPort(), &lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;网吧交换机-链路聚合-带宽回收：必须选一个业务接入端口！&quot;&lt;/span&gt;)&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return CONVERGE_RECOVER.getDesc()&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // 没有配置带宽回收vlan&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Assert.isTrue(ports.length &amp;gt;= 2, &lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;网吧交换机-链路聚合-不要带宽回收：需要选择两个及以上的端口！&quot;&lt;/span&gt;)&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return CONVERGE_RECOVER.getDesc()&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;br&gt;&lt;br&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; /****** 以下处理不需要聚合的情况 ******/&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; String[] &lt;span style=&quot;color: #569cd6;&quot;&gt;ports&lt;/span&gt; = switchPortBar.getPortId().split(&lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;,&quot;&lt;/span&gt;)&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if ((CORESW || AGGSW) &amp;amp;&amp;amp; &lt;span style=&quot;color: #569cd6;&quot;&gt;ports.length&lt;/span&gt; == 1) { //核心或汇聚 且 选一个端口&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return RECOVER.getDesc()&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (!barSwflag) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return null&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // 网吧交换机-带宽回收：只能选两个端口（一个顺网云接入、一个互联网回收）&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if (StringUtils.isNotBlank(switchPortBar.getTransVlanId())) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Assert.isTrue(&lt;span style=&quot;color: #569cd6;&quot;&gt;ports.length&lt;/span&gt; == 2, &lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;网吧交换机-不需要链路聚合-带宽回收，必须选择两个端口&quot;&lt;/span&gt;)&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Assert.notNull(switchPortBar.getInternetPort(), &lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;网吧交换机-不需要链路聚合-带宽回收: 必须选一个业务接入端口&quot;&lt;/span&gt;)&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return RECOVER.getDesc()&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // 网吧交换机-不需要带宽回收&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; Assert.isTrue(&lt;span style=&quot;color: #569cd6;&quot;&gt;ports.length&lt;/span&gt; == 1, &lt;span style=&quot;color: #ce9178;&quot;&gt;&quot;网吧交换机-不需要链路聚合-不需要带宽回收，只能选择一个端口&quot;&lt;/span&gt;)&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return RECOVER.getDesc()&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; default:// 单通道模式&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return NORMAL.getDesc()&lt;span style=&quot;color: #6a9955;&quot;&gt;;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;fontSize=10;fontColor=#FEFAE0;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="430" y="620" width="990" height="1030" as="geometry" />
+        <mxCell id="TWYUIV37gP8uN4usiFkh-6" value="String portModel = modelCheckAndGet(model, switchPortBar, room.getRoomId(), sysConfig, barSwflag);&#xa;&#xa;modelCheckAndGet(portEnum, switchPortBar, sysConfig, barSwflag) {&#xa;        switch (portEnum) {&#xa;            case RECYCLING: // 多通道模式&#xa;                // 需要聚合&#xa;                if (NEED.getType().equals(switchPortBar.getIsAggregation())) {&#xa;                    String[] ports = switchPortBar.getPortId().split(&quot;,&quot;);&#xa;&#xa;                    if ((CORESW || AGGSW) &amp;&amp; ports.length &gt;= 2) { //核心或汇聚 且 选两个以上端口&#xa;                        return CONVERGE_RECOVER.getDesc();&#xa;                    }&#xa;&#xa;                    if (!barSwflag) { //如果不是网吧交换机，直接返回null&#xa;                        return null;&#xa;                    }&#xa;&#xa;                    // 确实配置了带宽回收vlan&#xa;                    if (StringUtils.isNotBlank(switchPortBar.getTransVlanId())) {&#xa;                        // 网吧交换机需要选三个及以上端口（一个做带宽回收、其余的做顺网云接入）&#xa;                        Assert.isTrue(ports.length &gt;= 3, &quot;网吧交换机-链路聚合-带宽回收：需要选择三个及以上的端口！&quot;);&#xa;                        Assert.notNull(switchPortBar.getInternetPort(), &quot;网吧交换机-链路聚合-带宽回收：必须选一个业务接入端口！&quot;);&#xa;                        return CONVERGE_RECOVER.getDesc();&#xa;                    }&#xa;                    // 没有配置带宽回收vlan&#xa;                    Assert.isTrue(ports.length &gt;= 2, &quot;网吧交换机-链路聚合-不要带宽回收：需要选择两个及以上的端口！&quot;);&#xa;                    return CONVERGE_RECOVER.getDesc();&#xa;                }&#xa;&#xa;&#xa;                /****** 以下处理不需要聚合的情况 ******/&#xa;                String[] ports = switchPortBar.getPortId().split(&quot;,&quot;);&#xa;                if ((CORESW || AGGSW) &amp;&amp; ports.length == 1) { //核心或汇聚 且 选一个端口&#xa;                    return RECOVER.getDesc();&#xa;                }&#xa;                &#xa;                if (!barSwflag) {&#xa;                    return null;&#xa;                }&#xa;                // 网吧交换机-带宽回收：只能选两个端口（一个顺网云接入、一个互联网回收）&#xa;                if (StringUtils.isNotBlank(switchPortBar.getTransVlanId())) {&#xa;                    Assert.isTrue(ports.length == 2, &quot;网吧交换机-不需要链路聚合-带宽回收，必须选择两个端口&quot;);&#xa;                    Assert.notNull(switchPortBar.getInternetPort(), &quot;网吧交换机-不需要链路聚合-带宽回收: 必须选一个业务接入端口&quot;);&#xa;                    return RECOVER.getDesc();&#xa;                }&#xa;                // 网吧交换机-不需要带宽回收&#xa;                Assert.isTrue(ports.length == 1, &quot;网吧交换机-不需要链路聚合-不需要带宽回收，只能选择一个端口&quot;);&#xa;                return RECOVER.getDesc();&#xa;            &#xa;            default:// 单通道模式&#xa;                return NORMAL.getDesc();&#xa;        }&#xa;    }" style="text;whiteSpace=wrap;fontSize=10;fontColor=#FEFAE0;fillColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="930" y="240" width="680" height="800" as="geometry" />
         </mxCell>
-        <mxCell id="TWYUIV37gP8uN4usiFkh-7" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;CONVERGE_RECOVER: &lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 聚合 + (核心或汇聚 且 2个以上端口)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 聚合 + 有带宽回收vlan + (网吧 且 3个以上端口 且 有业务接入端口)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 聚合 + 没带宽回收vlan + (网吧 且 2个以上端口)&lt;/div&gt;&lt;br&gt;&lt;div&gt;RECOVER: &lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 无聚合 + (核心或汇聚 且 只能一个端口)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 无聚合 + 有带宽回收vlan + (网吧 且 只能2个端口 且 有业务接入端口)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 无聚合 + 没带宽回收vlan + (网吧 且 只能1个端口)&lt;/div&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=none;align=left;labelBackgroundColor=#999900;" vertex="1" parent="1">
-          <mxGeometry x="440" y="400" width="596" height="190" as="geometry" />
+        <mxCell id="TWYUIV37gP8uN4usiFkh-7" value="CONVERGE_RECOVER: &#xa;    RECYCLING + 聚合 + (核心或汇聚 且 2个以上端口)&#xa;    RECYCLING + 聚合 + 有带宽回收vlan + (网吧 且 3个以上端口 且 有业务接入端口)&#xa;    RECYCLING + 聚合 + 没带宽回收vlan + (网吧 且 2个以上端口)&#xa;&#xa;RECOVER: &#xa;    RECYCLING + 无聚合 + (核心或汇聚 且 只能一个端口)&#xa;    RECYCLING + 无聚合 + 有带宽回收vlan + (网吧 且 只能2个端口 且 有业务接入端口)&#xa;    RECYCLING + 无聚合 + 没带宽回收vlan + (网吧 且 只能1个端口)" style="shape=note;whiteSpace=wrap;backgroundOutline=1;darkOpacity=0.05;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=none;align=left;labelBackgroundColor=#999900;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="60" width="480" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="C5RBs43oDa-KdzZeNtuy" name="带宽回收(无聚合)">
-    <mxGraphModel dx="1560" dy="1553" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="多通道模式(无聚合)">
+    <mxGraphModel dx="2724" dy="1760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
-        <mxCell id="WIyWlLk6GJQsqaUBKTNV-2" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" target="WIyWlLk6GJQsqaUBKTNV-6" edge="1">
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-2" value="" style="rounded=0;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" target="WIyWlLk6GJQsqaUBKTNV-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;/div&gt;带宽回收模式(无聚合)&lt;br&gt;RECOVER" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="带宽回收模式(无聚合)&#xa;RECOVER" style="rounded=1;whiteSpace=wrap;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="160" y="80" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="WIyWlLk6GJQsqaUBKTNV-4" value="N" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-6" target="jYcGKKyAP8I1KN-inCQs-3" edge="1">
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-4" value="N" style="rounded=0;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-6" target="jYcGKKyAP8I1KN-inCQs-3" edge="1">
           <mxGeometry y="20" relative="1" as="geometry">
             <mxPoint as="offset" />
             <mxPoint x="220" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WIyWlLk6GJQsqaUBKTNV-5" value="Y" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-6" target="jYcGKKyAP8I1KN-inCQs-70" edge="1">
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-5" value="Y" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-6" target="jYcGKKyAP8I1KN-inCQs-70" edge="1">
           <mxGeometry y="10" relative="1" as="geometry">
             <mxPoint as="offset" />
             <mxPoint x="1210" y="210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WIyWlLk6GJQsqaUBKTNV-6" value="网吧接入Vlan&lt;br&gt;1或空" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-6" value="网吧接入Vlan&#xa;1或空" style="rhombus;whiteSpace=wrap;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="170" y="170" width="100" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-1" value="端口初始化：企业模式 、运营商模式且首次配置" style="text;whiteSpace=wrap;html=1;fontColor=#FEFAE0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="50" y="-310" width="290" height="30" as="geometry" />
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-1" value="端口初始化：企业模式 、运营商模式且首次配置" style="text;whiteSpace=wrap;fontColor=#FEFAE0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="640" y="-260" width="290" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-3" target="jYcGKKyAP8I1KN-inCQs-9">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-3" target="jYcGKKyAP8I1KN-inCQs-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-3" value="配置Vlan" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-3" value="配置Vlan" style="rounded=1;whiteSpace=wrap;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="160" y="300" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-6" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;vlan database&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;vlan 网吧接入vlan&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;vlan 带宽回收vlan //如果有&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-6" value="vlan database&#xa;vlan 网吧接入vlan&#xa;vlan 带宽回收vlan //如果有" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-120" y="280" width="200" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-9" target="jYcGKKyAP8I1KN-inCQs-14">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-9" target="jYcGKKyAP8I1KN-inCQs-14">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-9" value="端口描述" style="whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-9" value="端口描述" style="whiteSpace=wrap;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="160" y="430" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-11" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;interface eth-0-%s&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no description&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;description ？？？ //如果有&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-11" value="&#xa;&#xa;interface eth-0-%s&#xa;no description&#xa;description ？？？ //如果有&#xa;&#xa;&#xa;" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-130" y="405" width="210" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-14" target="jYcGKKyAP8I1KN-inCQs-18">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-14" target="jYcGKKyAP8I1KN-inCQs-18">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="320" y="550" />
@@ -68,45 +68,45 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-20" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FEFAE0;" vertex="1" connectable="0" parent="jYcGKKyAP8I1KN-inCQs-19">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-20" value="Y" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FEFAE0;" vertex="1" connectable="0" parent="jYcGKKyAP8I1KN-inCQs-19">
           <mxGeometry x="0.3369" relative="1" as="geometry">
             <mxPoint x="-13" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-14" target="jYcGKKyAP8I1KN-inCQs-21">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-14" target="jYcGKKyAP8I1KN-inCQs-21">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-23" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FEFAE0;" vertex="1" connectable="0" parent="jYcGKKyAP8I1KN-inCQs-22">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-23" value="N" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FEFAE0;" vertex="1" connectable="0" parent="jYcGKKyAP8I1KN-inCQs-22">
           <mxGeometry x="-0.2683" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-14" value="需要初始化" style="rhombus;whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-14" value="需要初始化" style="rhombus;whiteSpace=wrap;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="180" y="510" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-18" target="jYcGKKyAP8I1KN-inCQs-21">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-18" target="jYcGKKyAP8I1KN-inCQs-21">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="465" y="710" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-18" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;/div&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot; color=&quot;#d4d4d4&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;用户选择的所有&lt;br&gt;物理口初始化&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-18" value="用户选择的所有&#xa;物理口初始化" style="whiteSpace=wrap;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="400" y="525" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-21" target="jYcGKKyAP8I1KN-inCQs-30">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-21" target="jYcGKKyAP8I1KN-inCQs-30">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-21" value="端口链路模式&lt;br&gt;环回口检测" style="whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-21" value="端口链路模式&#xa;环回口检测" style="whiteSpace=wrap;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="160" y="680" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-25" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;switchport mode trunk&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;loopback-detect enable&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;loopback-detect action shutdown&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-25" value="switchport mode trunk&#xa;loopback-detect enable&#xa;loopback-detect action shutdown" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-200" y="650" width="280" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-27" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no switchport&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;switchport&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no static-channel-group&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no channel-group&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="600" y="510" width="190" height="100" as="geometry" />
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-27" value="no switchport&#xa;switchport&#xa;no static-channel-group&#xa;no channel-group" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="560" y="505" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-30" target="jYcGKKyAP8I1KN-inCQs-32">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-30" target="jYcGKKyAP8I1KN-inCQs-32">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="310" y="850" />
@@ -114,230 +114,230 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-37" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#FEFAE0;" vertex="1" connectable="0" parent="jYcGKKyAP8I1KN-inCQs-33">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-37" value="Y" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#FEFAE0;" vertex="1" connectable="0" parent="jYcGKKyAP8I1KN-inCQs-33">
           <mxGeometry x="-0.2047" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-30" target="jYcGKKyAP8I1KN-inCQs-39">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-30" target="jYcGKKyAP8I1KN-inCQs-39">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-30" value="企业模式" style="rhombus;whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-30" value="企业模式" style="rhombus;whiteSpace=wrap;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="180" y="810" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-32" target="jYcGKKyAP8I1KN-inCQs-39">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-32" target="jYcGKKyAP8I1KN-inCQs-39">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="410" y="1010" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-32" value="配置native vlan" style="whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-32" value="配置native vlan" style="whiteSpace=wrap;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="360" y="820" width="110" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-34" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;switchport trunk native vlan 网吧接入vlan&lt;/span&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="600" y="807.5" width="250" height="85" as="geometry" />
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-34" value="switchport trunk native vlan 网吧接入vlan" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="560" y="827.5" width="250" height="45" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-39" target="jYcGKKyAP8I1KN-inCQs-57">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-58" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-39" target="jYcGKKyAP8I1KN-inCQs-57">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-39" value="配置trunk permit vlan" style="whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-39" value="配置trunk permit vlan" style="whiteSpace=wrap;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="160" y="980" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-41" value="switchport trunk allowed vlan add &quot;网吧接入vlan,带宽回收vlan&quot;//有带宽回收vlan&amp;nbsp;&lt;br&gt;switchport trunk allowed vlan remove 1" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-41" value="switchport trunk allowed vlan add &quot;网吧接入vlan,带宽回收vlan&quot;//有带宽回收vlan &#xa;switchport trunk allowed vlan remove 1" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-370" y="970" width="450" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-46" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=0;entryY=0;entryDx=450;entryDy=40;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-39" target="jYcGKKyAP8I1KN-inCQs-41">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-46" value="" style="endArrow=none;dashed=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=0;entryY=0;entryDx=450;entryDy=40;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-39" target="jYcGKKyAP8I1KN-inCQs-41">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="390" y="920" as="sourcePoint" />
             <mxPoint x="80" y="1010" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-47" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-34" target="jYcGKKyAP8I1KN-inCQs-32">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-47" value="" style="endArrow=none;dashed=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-34" target="jYcGKKyAP8I1KN-inCQs-32">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="390" y="920" as="sourcePoint" />
             <mxPoint x="440" y="870" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-49" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-27">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-49" value="" style="endArrow=none;dashed=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-27" target="jYcGKKyAP8I1KN-inCQs-18">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="650" y="560" as="sourcePoint" />
-            <mxPoint x="520" y="560" as="targetPoint" />
+            <mxPoint x="460" y="520" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-50" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;exitX=0;exitY=0;exitDx=280;exitDy=60;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-25" target="jYcGKKyAP8I1KN-inCQs-21">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-50" value="" style="endArrow=none;dashed=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;exitX=0;exitY=0;exitDx=280;exitDy=60;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-25" target="jYcGKKyAP8I1KN-inCQs-21">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="270" y="710" as="sourcePoint" />
             <mxPoint x="320" y="660" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-53" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;exitX=0;exitY=0;exitDx=210;exitDy=45;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-11" target="jYcGKKyAP8I1KN-inCQs-9">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-53" value="" style="endArrow=none;dashed=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;exitX=0;exitY=0;exitDx=210;exitDy=45;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-11" target="jYcGKKyAP8I1KN-inCQs-9">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="270" y="540" as="sourcePoint" />
             <mxPoint x="320" y="490" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-54" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1.025;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-6" target="jYcGKKyAP8I1KN-inCQs-3">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-54" value="" style="endArrow=none;dashed=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1.025;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-6" target="jYcGKKyAP8I1KN-inCQs-3">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="270" y="450" as="sourcePoint" />
             <mxPoint x="320" y="400" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-57" value="配置vlanif" style="whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="160" y="1120" width="120" height="60" as="geometry" />
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-57" value="配置vlanif" style="whiteSpace=wrap;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="160" y="1109" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-59" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;interface vlan 网吧接入vlan &lt;br&gt;dhcp server 1&lt;br&gt;&amp;nbsp;ip address ip mask&lt;/span&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#2D7600;fontSize=10;fontColor=#ffffff;fillColor=#60a917;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-160" y="1109" width="240" height="60" as="geometry" />
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-59" value="interface vlan 网吧接入vlan &#xa;dhcp server 1&#xa; ip address ip mask" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#2D7600;fontSize=10;fontColor=#ffffff;fillColor=#60a917;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-160" y="1100" width="240" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-60" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=0;entryY=0;entryDx=240;entryDy=40;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-57" target="jYcGKKyAP8I1KN-inCQs-59">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-60" value="" style="endArrow=none;dashed=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=0;entryY=0;entryDx=240;entryDy=40;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-57" target="jYcGKKyAP8I1KN-inCQs-59">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="150" y="1090" as="sourcePoint" />
             <mxPoint x="60" y="1090" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-61" target="jYcGKKyAP8I1KN-inCQs-65">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-77" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-61" target="jYcGKKyAP8I1KN-inCQs-65">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-78" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#FEFAE0;" vertex="1" connectable="0" parent="jYcGKKyAP8I1KN-inCQs-77">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-78" value="Y" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#FEFAE0;" vertex="1" connectable="0" parent="jYcGKKyAP8I1KN-inCQs-77">
           <mxGeometry x="-0.2194" y="3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-84" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-61" target="jYcGKKyAP8I1KN-inCQs-83">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-84" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-61" target="jYcGKKyAP8I1KN-inCQs-83">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-61" value="带宽回收vlan不为空" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1170" y="310" width="80" height="80" as="geometry" />
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-61" value="带宽回收vlan不为空" style="rhombus;whiteSpace=wrap;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="930" y="310" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-82" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-65" target="jYcGKKyAP8I1KN-inCQs-81">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-82" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-65" target="jYcGKKyAP8I1KN-inCQs-81">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-65" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;vlan database&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;vlan 带宽回收vlan&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1400" y="310" width="200" height="80" as="geometry" />
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-65" value="vlan database&#xa;vlan 带宽回收vlan&#xa;" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1160" y="310" width="200" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-72" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-70" target="jYcGKKyAP8I1KN-inCQs-71">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-72" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-70" target="jYcGKKyAP8I1KN-inCQs-71">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-73" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#FEFAE0;" vertex="1" connectable="0" parent="jYcGKKyAP8I1KN-inCQs-72">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-73" value="Y" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#FEFAE0;" vertex="1" connectable="0" parent="jYcGKKyAP8I1KN-inCQs-72">
           <mxGeometry x="-0.1454" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-70" target="jYcGKKyAP8I1KN-inCQs-61">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-76" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-70" target="jYcGKKyAP8I1KN-inCQs-61">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-70" value="需要初始化" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1170" y="170" width="80" height="80" as="geometry" />
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-70" value="需要初始化" style="rhombus;whiteSpace=wrap;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="930" y="170" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-71" target="jYcGKKyAP8I1KN-inCQs-61">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-80" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="jYcGKKyAP8I1KN-inCQs-71" target="jYcGKKyAP8I1KN-inCQs-61">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1490" y="280" />
-              <mxPoint x="1210" y="280" />
+              <mxPoint x="1250" y="280" />
+              <mxPoint x="970" y="280" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-71" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no switchport&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;switchport&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no static-channel-group&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no channel-group&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1380" y="180" width="220" height="60" as="geometry" />
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-71" value="no switchport&#xa;switchport&#xa;no static-channel-group&#xa;no channel-group" style="whiteSpace=wrap;fontSize=10;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1140" y="180" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-81" value="每个物理口：&lt;br&gt;interface eth-0-%s &lt;br&gt;description %s &lt;br&gt;switchport trunk allowed vlan add 带宽回收vlan &lt;br&gt;loopback-detect enable &lt;br&gt;loopback-detect action shutdown" style="whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1654" y="305" width="286" height="90" as="geometry" />
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-81" value="每个物理口：&#xa;interface eth-0-%s &#xa;description %s &#xa;switchport trunk allowed vlan add 带宽回收vlan &#xa;loopback-detect enable &#xa;loopback-detect action shutdown" style="whiteSpace=wrap;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1414" y="305" width="286" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-83" value="interface vlan 1&lt;br&gt;dhcp server 1&lt;br&gt;&amp;nbsp;ip address ip mask" style="whiteSpace=wrap;html=1;fontSize=10;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1120" y="480" width="180" height="60" as="geometry" />
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-83" value="interface vlan 1&#xa;dhcp server 1&#xa; ip address ip mask" style="whiteSpace=wrap;fontSize=10;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="880" y="480" width="180" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="gkT6pTjZ7aR7ywqfMHqo-0" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;CONVERGE_RECOVER: &lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 聚合 + (核心或汇聚 且 2个以上端口)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 聚合 + 有带宽回收vlan + (网吧 且 3个以上端口 且 有业务接入端口)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 聚合 + 没带宽回收vlan + (网吧 且 2个以上端口)&lt;/div&gt;&lt;br&gt;&lt;div&gt;RECOVER: &lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 无聚合 + (核心或汇聚 且 只能一个端口)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 无聚合 + 有带宽回收vlan + (网吧 且 只能2个端口 且 有业务接入端口)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 无聚合 + 没带宽回收vlan + (网吧 且 只能1个端口)&lt;/div&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=none;align=left;labelBackgroundColor=#999900;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="-10" y="-130" width="596" height="190" as="geometry" />
+        <mxCell id="gkT6pTjZ7aR7ywqfMHqo-0" value="CONVERGE_RECOVER: &#xa;    RECYCLING + 聚合 + (核心或汇聚 且 2个以上端口)&#xa;    RECYCLING + 聚合 + 有带宽回收vlan + (网吧 且 3个以上端口 且 有业务接入端口)&#xa;    RECYCLING + 聚合 + 没带宽回收vlan + (网吧 且 2个以上端口)&#xa;&#xa;RECOVER: &#xa;    RECYCLING + 无聚合 + (核心或汇聚 且 只能一个端口)&#xa;    RECYCLING + 无聚合 + 有带宽回收vlan + (网吧 且 只能2个端口 且 有业务接入端口)&#xa;    RECYCLING + 无聚合 + 没带宽回收vlan + (网吧 且 只能1个端口)" style="shape=note;whiteSpace=wrap;backgroundOutline=1;darkOpacity=0.05;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=none;align=left;labelBackgroundColor=#999900;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="560" y="-160" width="480" height="160" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="带宽回收(聚合) " id="S91XvPBqhbfsJkeQOtBc">
-    <mxGraphModel dx="2724" dy="1760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
+  <diagram name="多通道模式(聚合) " id="S91XvPBqhbfsJkeQOtBc">
+    <mxGraphModel dx="2724" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
       <root>
         <mxCell id="_etaKtDSM-wvSbGmYz5o-0" />
         <mxCell id="_etaKtDSM-wvSbGmYz5o-1" parent="_etaKtDSM-wvSbGmYz5o-0" />
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-2" value="" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;strokeColor=#DDA15E;fontColor=#FEFAE0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-3" target="_etaKtDSM-wvSbGmYz5o-6">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-2" value="" style="rounded=0;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;strokeColor=#DDA15E;fontColor=#FEFAE0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-3" target="_etaKtDSM-wvSbGmYz5o-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-3" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;/div&gt;带宽回收模式(聚合)&lt;br&gt;CONVERGE_RECOVER" style="rounded=1;whiteSpace=wrap;html=1;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-3" value="带宽回收模式(聚合)&#xa;CONVERGE_RECOVER" style="rounded=1;whiteSpace=wrap;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="160" y="80" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-4" value="N" style="rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;strokeColor=#DDA15E;fontColor=#FEFAE0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-6" target="_etaKtDSM-wvSbGmYz5o-9">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-4" value="N" style="rounded=0;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;strokeColor=#DDA15E;fontColor=#FEFAE0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-6" target="_etaKtDSM-wvSbGmYz5o-9">
           <mxGeometry y="20" relative="1" as="geometry">
             <mxPoint as="offset" />
             <mxPoint x="220" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-5" value="Y" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;strokeColor=#DDA15E;fontColor=#FEFAE0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-6" target="_etaKtDSM-wvSbGmYz5o-53">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-5" value="Y" style="edgeStyle=orthogonalEdgeStyle;rounded=0;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;strokeColor=#DDA15E;fontColor=#FEFAE0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-6" target="_etaKtDSM-wvSbGmYz5o-53">
           <mxGeometry y="10" relative="1" as="geometry">
             <mxPoint as="offset" />
             <mxPoint x="1210" y="210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-6" value="网吧接入Vlan&lt;br&gt;1或空" style="rhombus;whiteSpace=wrap;html=1;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-6" value="网吧接入Vlan&#xa;1或空" style="rhombus;whiteSpace=wrap;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="170" y="170" width="100" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-7" value="端口初始化：企业模式 、运营商模式且首次配置" style="text;whiteSpace=wrap;html=1;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
-          <mxGeometry x="50" y="-310" width="290" height="30" as="geometry" />
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-7" value="端口初始化：企业模式 、运营商模式且首次配置" style="text;whiteSpace=wrap;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+          <mxGeometry x="1040" y="20" width="290" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-9" target="_etaKtDSM-wvSbGmYz5o-18">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-9" target="_etaKtDSM-wvSbGmYz5o-18">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="220" y="430" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-9" value="配置Vlan" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-9" value="配置Vlan" style="rounded=1;whiteSpace=wrap;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="160" y="300" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-10" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;vlan database&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;vlan 网吧接入vlan&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;vlan 带宽回收vlan //如果有&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-10" value="vlan database&#xa;vlan 网吧接入vlan&#xa;vlan 带宽回收vlan //如果有" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="-120" y="280" width="200" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-18" target="_etaKtDSM-wvSbGmYz5o-20">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-18" target="_etaKtDSM-wvSbGmYz5o-20">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="460" y="485" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-15" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FEFAE0;" vertex="1" connectable="0" parent="_etaKtDSM-wvSbGmYz5o-14">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-15" value="Y" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FEFAE0;" vertex="1" connectable="0" parent="_etaKtDSM-wvSbGmYz5o-14">
           <mxGeometry x="0.3369" relative="1" as="geometry">
             <mxPoint x="-13" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-18" target="_etaKtDSM-wvSbGmYz5o-22">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-18" target="_etaKtDSM-wvSbGmYz5o-22">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-17" value="N" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FEFAE0;" vertex="1" connectable="0" parent="_etaKtDSM-wvSbGmYz5o-16">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-17" value="N" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#FEFAE0;" vertex="1" connectable="0" parent="_etaKtDSM-wvSbGmYz5o-16">
           <mxGeometry x="-0.2683" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-18" value="需要初始化" style="rhombus;whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-18" value="需要初始化" style="rhombus;whiteSpace=wrap;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="180" y="445" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-20" target="_etaKtDSM-wvSbGmYz5o-22">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-20" target="_etaKtDSM-wvSbGmYz5o-22">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="465" y="710" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-20" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;/div&gt;&lt;font face=&quot;Consolas, Courier New, monospace&quot; color=&quot;#d4d4d4&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;用户选择的所有&lt;br&gt;物理口初始化&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-20" value="用户选择的所有&#xa;物理口初始化" style="whiteSpace=wrap;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="400" y="525" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-22" target="_etaKtDSM-wvSbGmYz5o-28">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-22" target="_etaKtDSM-wvSbGmYz5o-28">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-22" value="配置聚合接口&lt;br&gt;链路模式" style="whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-22" value="配置聚合接口&#xa;链路模式" style="whiteSpace=wrap;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="160" y="680" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-23" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;div&gt;interface &quot;agg&quot;+聚合组ID&lt;/div&gt;&lt;div&gt;no description //如果配置了描述&lt;/div&gt;&lt;div&gt;description 描述 //如果配置了描述&lt;/div&gt;&lt;div&gt;switchport mode trunk&lt;/div&gt;&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#2D7600;fontColor=#ffffff;fillColor=#60a917;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-23" value="interface &quot;agg&quot;+聚合组ID&#xa;no description //如果配置了描述&#xa;description 描述 //如果配置了描述&#xa;switchport mode trunk" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#2D7600;fontColor=#ffffff;fillColor=#60a917;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="-200" y="650" width="280" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-24" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;interface eth-0-端口号&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no switchport&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;switchport&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no static-channel-group&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no channel-group&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;channel-group 聚合组ID mode active //如果动聚&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;static-channel-group 聚合组ID //如果静聚&lt;/div&gt;&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#2D7600;fontColor=#ffffff;fillColor=#60a917;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-24" value="interface eth-0-端口号&#xa;&#xa;no switchport&#xa;switchport&#xa;no static-channel-group&#xa;no channel-group&#xa;&#xa;channel-group 聚合组ID mode active //如果动聚 &#xa;&#xa;static-channel-group 聚合组ID //如果静聚" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#2D7600;fontColor=#ffffff;fillColor=#60a917;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="605" y="470" width="405" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-28" target="_etaKtDSM-wvSbGmYz5o-30">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-28" target="_etaKtDSM-wvSbGmYz5o-30">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="310" y="850" />
@@ -345,120 +345,120 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-26" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#FEFAE0;" vertex="1" connectable="0" parent="_etaKtDSM-wvSbGmYz5o-25">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-26" value="Y" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#FEFAE0;" vertex="1" connectable="0" parent="_etaKtDSM-wvSbGmYz5o-25">
           <mxGeometry x="-0.2047" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-28" target="_etaKtDSM-wvSbGmYz5o-33">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-28" target="_etaKtDSM-wvSbGmYz5o-33">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-28" value="企业模式" style="rhombus;whiteSpace=wrap;html=1;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-28" value="企业模式" style="rhombus;whiteSpace=wrap;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="180" y="810" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-30" target="_etaKtDSM-wvSbGmYz5o-33">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-30" target="_etaKtDSM-wvSbGmYz5o-33">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="410" y="1010" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-30" value="配置native vlan" style="whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-30" value="配置native vlan" style="whiteSpace=wrap;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="360" y="820" width="110" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-31" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;switchport trunk native vlan 网吧接入vlan&lt;/span&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#2D7600;fontSize=10;fontColor=#ffffff;fillColor=#60a917;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-31" value="switchport trunk native vlan 网吧接入vlan" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#2D7600;fontSize=10;fontColor=#ffffff;fillColor=#60a917;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="600" y="807.5" width="250" height="85" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-33" target="_etaKtDSM-wvSbGmYz5o-41">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-32" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-33" target="_etaKtDSM-wvSbGmYz5o-41">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-33" value="配置trunk permit vlan" style="whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-33" value="配置trunk permit vlan" style="whiteSpace=wrap;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="160" y="980" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-34" value="switchport trunk allowed vlan add &quot;网吧接入vlan,带宽回收vlan&quot;//有带宽回收vlan&amp;nbsp;&lt;br&gt;switchport trunk allowed vlan remove 1" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#2D7600;fontSize=10;fontColor=#ffffff;fillColor=#60a917;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-34" value="switchport trunk allowed vlan add &quot;网吧接入vlan,带宽回收vlan&quot;//有带宽回收vlan &#xa;switchport trunk allowed vlan remove 1" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#2D7600;fontSize=10;fontColor=#ffffff;fillColor=#60a917;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="-370" y="970" width="450" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-35" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=0;entryY=0;entryDx=450;entryDy=40;entryPerimeter=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-33" target="_etaKtDSM-wvSbGmYz5o-34">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-35" value="" style="endArrow=none;dashed=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=0;entryY=0;entryDx=450;entryDy=40;entryPerimeter=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-33" target="_etaKtDSM-wvSbGmYz5o-34">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="390" y="920" as="sourcePoint" />
             <mxPoint x="80" y="1010" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-36" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-31" target="_etaKtDSM-wvSbGmYz5o-30">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-36" value="" style="endArrow=none;dashed=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-31" target="_etaKtDSM-wvSbGmYz5o-30">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="390" y="920" as="sourcePoint" />
             <mxPoint x="440" y="870" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-37" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-24">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-37" value="" style="endArrow=none;dashed=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-24">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="650" y="560" as="sourcePoint" />
             <mxPoint x="520" y="560" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-38" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;exitX=0;exitY=0;exitDx=280;exitDy=60;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-23" target="_etaKtDSM-wvSbGmYz5o-22">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-38" value="" style="endArrow=none;dashed=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;exitX=0;exitY=0;exitDx=280;exitDy=60;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-23" target="_etaKtDSM-wvSbGmYz5o-22">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="270" y="710" as="sourcePoint" />
             <mxPoint x="320" y="660" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-40" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1.025;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-10" target="_etaKtDSM-wvSbGmYz5o-9">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-40" value="" style="endArrow=none;dashed=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1.025;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-10" target="_etaKtDSM-wvSbGmYz5o-9">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="270" y="450" as="sourcePoint" />
             <mxPoint x="320" y="400" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-41" value="配置vlanif" style="whiteSpace=wrap;html=1;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
-          <mxGeometry x="160" y="1120" width="120" height="60" as="geometry" />
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-41" value="配置vlanif" style="whiteSpace=wrap;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+          <mxGeometry x="160" y="1109" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-42" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;interface vlan 网吧接入vlan &lt;br&gt;dhcp server 1&lt;br&gt;&amp;nbsp;ip address ip mask&lt;/span&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#2D7600;fontSize=10;fontColor=#ffffff;fillColor=#60a917;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-42" value="interface vlan 网吧接入vlan &#xa;dhcp server 1&#xa; ip address ip mask" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#2D7600;fontSize=10;fontColor=#ffffff;fillColor=#60a917;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="-160" y="1109" width="240" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-43" value="" style="endArrow=none;dashed=1;html=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=0;entryY=0;entryDx=240;entryDy=40;entryPerimeter=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-41" target="_etaKtDSM-wvSbGmYz5o-42">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-43" value="" style="endArrow=none;dashed=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=0;entryY=0;entryDx=240;entryDy=40;entryPerimeter=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-41" target="_etaKtDSM-wvSbGmYz5o-42">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="150" y="1090" as="sourcePoint" />
             <mxPoint x="60" y="1090" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-47" target="_etaKtDSM-wvSbGmYz5o-49">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-47" target="_etaKtDSM-wvSbGmYz5o-49">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-45" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#FEFAE0;" vertex="1" connectable="0" parent="_etaKtDSM-wvSbGmYz5o-44">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-45" value="Y" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#FEFAE0;" vertex="1" connectable="0" parent="_etaKtDSM-wvSbGmYz5o-44">
           <mxGeometry x="-0.2194" y="3" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-47" target="_etaKtDSM-wvSbGmYz5o-57">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-47" target="_etaKtDSM-wvSbGmYz5o-57">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-47" value="需要初始化" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-47" value="需要初始化" style="rhombus;whiteSpace=wrap;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="1170" y="310" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="25HNAo7b-qshWgZO0dyQ-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.005;entryY=0.56;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;entryPerimeter=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-49" target="_etaKtDSM-wvSbGmYz5o-57">
+        <mxCell id="25HNAo7b-qshWgZO0dyQ-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=1.005;entryY=0.56;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;entryPerimeter=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-49" target="_etaKtDSM-wvSbGmYz5o-57">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1580" y="595" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-49" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;div&gt;no switchport&lt;/div&gt;&lt;div&gt;switchport&lt;/div&gt;&lt;div&gt;no static-channel-group&lt;/div&gt;&lt;div&gt;no channel-group&lt;br&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;channel-group 聚合组ID mode active //如果动聚&amp;nbsp;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;static-channel-group 聚合组ID //如果静聚&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;strokeColor=#2D7600;fillColor=#BC6C25;fontColor=#ffffff;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-49" value="no switchport&#xa;switchport&#xa;no static-channel-group&#xa;no channel-group&#xa;&#xa;channel-group 聚合组ID mode active //如果动聚 &#xa;&#xa;static-channel-group 聚合组ID //如果静聚" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#2D7600;fillColor=#BC6C25;fontColor=#ffffff;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="1380" y="285" width="380" height="130" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-53" target="_etaKtDSM-wvSbGmYz5o-55">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-53" target="_etaKtDSM-wvSbGmYz5o-55">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-51" value="Y" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#FEFAE0;" vertex="1" connectable="0" parent="_etaKtDSM-wvSbGmYz5o-50">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-51" value="Y" style="edgeLabel;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#FEFAE0;" vertex="1" connectable="0" parent="_etaKtDSM-wvSbGmYz5o-50">
           <mxGeometry x="-0.1454" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-53" target="_etaKtDSM-wvSbGmYz5o-47">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-52" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-53" target="_etaKtDSM-wvSbGmYz5o-47">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-53" value="带宽回收vlan不为空" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-53" value="带宽回收vlan不为空" style="rhombus;whiteSpace=wrap;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="1170" y="170" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-55" target="_etaKtDSM-wvSbGmYz5o-47">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-55" target="_etaKtDSM-wvSbGmYz5o-47">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1490" y="270" />
@@ -466,26 +466,37 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-55" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;vlan database&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;vlan 带宽回收vlan&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fillColor=#BC6C25;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-55" value="vlan database&#xa;vlan 带宽回收vlan" style="whiteSpace=wrap;fontSize=10;fillColor=#BC6C25;strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="1380" y="180" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="25HNAo7b-qshWgZO0dyQ-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-57" target="25HNAo7b-qshWgZO0dyQ-5">
+        <mxCell id="25HNAo7b-qshWgZO0dyQ-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-57" target="25HNAo7b-qshWgZO0dyQ-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-57" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;interface &quot;agg&quot;+聚合组ID&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;no description //如果配置了描述&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;description 描述 //如果配置了描述&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px;&quot;&gt;switchport mode trunk&lt;/div&gt;interface vlan 1&lt;br&gt;dhcp server 1&lt;br&gt;&amp;nbsp;ip address ip mask" style="whiteSpace=wrap;html=1;fontSize=10;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-57" value="interface &quot;agg&quot;+聚合组ID&#xa;no description //如果配置了描述&#xa;description 描述 //如果配置了描述&#xa;switchport mode trunkinterface vlan 1&#xa;dhcp server 1&#xa; ip address ip mask" style="whiteSpace=wrap;fontSize=10;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="1060" y="505" width="300" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-58" value="&lt;div style=&quot;color: rgb(212, 212, 212); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px;&quot;&gt;&lt;div&gt;CONVERGE_RECOVER: &lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 聚合 + (核心或汇聚 且 2个以上端口)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 聚合 + 有带宽回收vlan + (网吧 且 3个以上端口 且 有业务接入端口)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 聚合 + 没带宽回收vlan + (网吧 且 2个以上端口)&lt;/div&gt;&lt;br&gt;&lt;div&gt;RECOVER: &lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 无聚合 + (核心或汇聚 且 只能一个端口)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 无聚合 + 有带宽回收vlan + (网吧 且 只能2个端口 且 有业务接入端口)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; RECYCLING + 无聚合 + 没带宽回收vlan + (网吧 且 只能1个端口)&lt;/div&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=none;align=left;labelBackgroundColor=#999900;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
-          <mxGeometry x="-10" y="-130" width="596" height="190" as="geometry" />
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-58" value="CONVERGE_RECOVER: &#xa;    RECYCLING + 聚合 + (核心或汇聚 且 2个以上端口)&#xa;    RECYCLING + 聚合 + 有带宽回收vlan + (网吧 且 3个以上端口 且 有业务接入端口)&#xa;    RECYCLING + 聚合 + 没带宽回收vlan + (网吧 且 2个以上端口)&#xa;&#xa;RECOVER: &#xa;    RECYCLING + 无聚合 + (核心或汇聚 且 只能一个端口)&#xa;    RECYCLING + 无聚合 + 有带宽回收vlan + (网吧 且 只能2个端口 且 有业务接入端口)&#xa;    RECYCLING + 无聚合 + 没带宽回收vlan + (网吧 且 只能1个端口)" style="shape=note;whiteSpace=wrap;backgroundOutline=1;darkOpacity=0.05;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=none;align=left;labelBackgroundColor=#999900;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+          <mxGeometry x="540" width="480" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="25HNAo7b-qshWgZO0dyQ-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="25HNAo7b-qshWgZO0dyQ-5" target="25HNAo7b-qshWgZO0dyQ-7">
+        <mxCell id="25HNAo7b-qshWgZO0dyQ-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="25HNAo7b-qshWgZO0dyQ-5" target="25HNAo7b-qshWgZO0dyQ-7">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="25HNAo7b-qshWgZO0dyQ-5" value="带宽回收vlan不为空" style="rhombus;whiteSpace=wrap;html=1;fontSize=10;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="25HNAo7b-qshWgZO0dyQ-5" value="带宽回收vlan不为空" style="rhombus;whiteSpace=wrap;fontSize=10;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="1170" y="785" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="25HNAo7b-qshWgZO0dyQ-7" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;switchport trunk allowed vlan add 带宽回收vlan&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=10;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="25HNAo7b-qshWgZO0dyQ-7" value="switchport trunk allowed vlan add 带宽回收vlan" style="whiteSpace=wrap;fontSize=10;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="1075" y="960" width="270" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="bO9DgsLWtpnPfF_cRcS2" name="单通道模式">
+    <mxGraphModel dx="1897" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KWx0cEF-d_MwEUVEPM_t-2" value="no description //如果配置了描述&lt;br&gt;description 描述 //如果配置了描述&lt;br&gt;no switchport&lt;br&gt;dhcp-server 1&lt;br&gt;ip address ip mask" style="shape=note;whiteSpace=wrap;backgroundOutline=1;darkOpacity=0.05;labelBackgroundColor=none;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;fontSize=22;html=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="180" width="401" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
