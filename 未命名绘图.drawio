@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-12-16T07:25:10.076Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="LEfHsJFHyXJFX-gSVrcj" version="20.6.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-12-16T07:25:23.238Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="068tYemJIexBWCbeXZCF" version="20.6.2" type="github" pages="4">
   <diagram id="KCGnJsf7bXrOIoNxbifd" name="portModel">
     <mxGraphModel dx="1070" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
       <root>
@@ -363,7 +363,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-30" value="配置native vlan" style="whiteSpace=wrap;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-30" value="配置default vlan" style="whiteSpace=wrap;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;rounded=1;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="360" y="820" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="_etaKtDSM-wvSbGmYz5o-31" value="switchport trunk native vlan 网吧接入vlan" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#2D7600;fontSize=10;fontColor=#ffffff;fillColor=#60a917;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
