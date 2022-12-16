@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-12-15T09:49:04.947Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="-j-kneMZmNCVy4j8EIbA" version="20.6.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-12-16T02:01:05.735Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="KTpvQl6EwnnfO-POcnF3" version="20.6.2" type="github" pages="4">
   <diagram id="KCGnJsf7bXrOIoNxbifd" name="portModel">
     <mxGraphModel dx="1070" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
       <root>
@@ -14,7 +14,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="多通道模式(无聚合)">
-    <mxGraphModel dx="2724" dy="1760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
+    <mxGraphModel dx="1560" dy="1553" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -412,7 +412,7 @@
           <mxGeometry x="160" y="1109" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="_etaKtDSM-wvSbGmYz5o-42" value="interface vlan 网吧接入vlan &#xa;dhcp server 1&#xa; ip address ip mask" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#2D7600;fontSize=10;fontColor=#ffffff;fillColor=#60a917;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
-          <mxGeometry x="-160" y="1109" width="240" height="60" as="geometry" />
+          <mxGeometry x="-160" y="1100" width="240" height="60" as="geometry" />
         </mxCell>
         <mxCell id="_etaKtDSM-wvSbGmYz5o-43" value="" style="endArrow=none;dashed=1;rounded=0;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;entryX=0;entryY=0;entryDx=240;entryDy=40;entryPerimeter=0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-41" target="_etaKtDSM-wvSbGmYz5o-42">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -495,7 +495,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="KWx0cEF-d_MwEUVEPM_t-2" value="no description //如果配置了描述&lt;br&gt;description 描述 //如果配置了描述&lt;br&gt;no switchport&lt;br&gt;dhcp-server 1&lt;br&gt;ip address ip mask" style="shape=note;whiteSpace=wrap;backgroundOutline=1;darkOpacity=0.05;labelBackgroundColor=none;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;fontSize=22;html=1;" vertex="1" parent="1">
+        <mxCell id="KWx0cEF-d_MwEUVEPM_t-2" value="no description //如果配置了描述&#xa;description 描述 //如果配置了描述&#xa;no switchport&#xa;dhcp-server 1&#xa;ip address ip mask" style="shape=note;whiteSpace=wrap;backgroundOutline=1;darkOpacity=0.05;labelBackgroundColor=none;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;fontSize=22;" vertex="1" parent="1">
           <mxGeometry x="250" y="180" width="401" height="150" as="geometry" />
         </mxCell>
       </root>
