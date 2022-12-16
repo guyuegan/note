@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-12-16T02:01:05.735Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="KTpvQl6EwnnfO-POcnF3" version="20.6.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-12-16T07:08:33.188Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="MCLDNKa9lZSf7sX45Ik2" version="20.6.2" type="github" pages="4">
   <diagram id="KCGnJsf7bXrOIoNxbifd" name="portModel">
     <mxGraphModel dx="1070" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
       <root>
@@ -14,14 +14,14 @@
     </mxGraphModel>
   </diagram>
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="多通道模式(无聚合)">
-    <mxGraphModel dx="1560" dy="1553" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
+    <mxGraphModel dx="1800" dy="1553" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-2" value="" style="rounded=0;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-3" target="WIyWlLk6GJQsqaUBKTNV-6" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="带宽回收模式(无聚合)&#xa;RECOVER" style="rounded=1;whiteSpace=wrap;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-3" value="带宽回收 + 无聚合&#xa;RECOVER" style="rounded=1;whiteSpace=wrap;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="160" y="80" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-4" value="N" style="rounded=0;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WIyWlLk6GJQsqaUBKTNV-6" target="jYcGKKyAP8I1KN-inCQs-3" edge="1">
@@ -36,7 +36,7 @@
             <mxPoint x="1210" y="210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="WIyWlLk6GJQsqaUBKTNV-6" value="网吧接入Vlan&#xa;1或空" style="rhombus;whiteSpace=wrap;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-6" value="&#xa;网吧交换机且&#xa;网吧接入Vlan&#xa;1或空" style="rhombus;whiteSpace=wrap;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="170" y="170" width="100" height="80" as="geometry" />
         </mxCell>
         <mxCell id="jYcGKKyAP8I1KN-inCQs-1" value="端口初始化：企业模式 、运营商模式且首次配置" style="text;whiteSpace=wrap;fontColor=#FEFAE0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
@@ -253,14 +253,14 @@
     </mxGraphModel>
   </diagram>
   <diagram name="多通道模式(聚合) " id="S91XvPBqhbfsJkeQOtBc">
-    <mxGraphModel dx="2724" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
+    <mxGraphModel dx="1800" dy="384" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
       <root>
         <mxCell id="_etaKtDSM-wvSbGmYz5o-0" />
         <mxCell id="_etaKtDSM-wvSbGmYz5o-1" parent="_etaKtDSM-wvSbGmYz5o-0" />
         <mxCell id="_etaKtDSM-wvSbGmYz5o-2" value="" style="rounded=0;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;strokeColor=#DDA15E;fontColor=#FEFAE0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-3" target="_etaKtDSM-wvSbGmYz5o-6">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-3" value="带宽回收模式(聚合)&#xa;CONVERGE_RECOVER" style="rounded=1;whiteSpace=wrap;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-3" value="带宽回收 + 聚合&#xa;CONVERGE_RECOVER" style="rounded=1;whiteSpace=wrap;fontSize=12;glass=0;strokeWidth=1;shadow=0;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="160" y="80" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="_etaKtDSM-wvSbGmYz5o-4" value="N" style="rounded=0;jettySize=auto;orthogonalLoop=1;fontSize=11;endArrow=block;endFill=0;endSize=8;strokeWidth=1;shadow=0;labelBackgroundColor=none;edgeStyle=orthogonalEdgeStyle;strokeColor=#DDA15E;fontColor=#FEFAE0;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-6" target="_etaKtDSM-wvSbGmYz5o-9">
@@ -275,7 +275,7 @@
             <mxPoint x="1210" y="210" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-6" value="网吧接入Vlan&#xa;1或空" style="rhombus;whiteSpace=wrap;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-6" value="网吧交换机且&#xa;网吧接入Vlan&#xa;1或空" style="rhombus;whiteSpace=wrap;shadow=0;fontFamily=Helvetica;fontSize=12;align=center;strokeWidth=1;spacing=6;spacingTop=-4;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="170" y="170" width="100" height="80" as="geometry" />
         </mxCell>
         <mxCell id="_etaKtDSM-wvSbGmYz5o-7" value="端口初始化：企业模式 、运营商模式且首次配置" style="text;whiteSpace=wrap;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
