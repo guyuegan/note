@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-12-16T07:08:33.188Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="MCLDNKa9lZSf7sX45Ik2" version="20.6.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-12-16T07:25:10.076Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="LEfHsJFHyXJFX-gSVrcj" version="20.6.2" type="github" pages="4">
   <diagram id="KCGnJsf7bXrOIoNxbifd" name="portModel">
     <mxGraphModel dx="1070" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
       <root>
@@ -132,7 +132,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jYcGKKyAP8I1KN-inCQs-32" value="配置native vlan" style="whiteSpace=wrap;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="jYcGKKyAP8I1KN-inCQs-32" value="配置default vlan" style="whiteSpace=wrap;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;rounded=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="360" y="820" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="jYcGKKyAP8I1KN-inCQs-34" value="switchport trunk native vlan 网吧接入vlan" style="shape=note;size=20;whiteSpace=wrap;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=#BC6C25;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
@@ -472,7 +472,7 @@
         <mxCell id="25HNAo7b-qshWgZO0dyQ-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;" edge="1" parent="_etaKtDSM-wvSbGmYz5o-1" source="_etaKtDSM-wvSbGmYz5o-57" target="25HNAo7b-qshWgZO0dyQ-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="_etaKtDSM-wvSbGmYz5o-57" value="interface &quot;agg&quot;+聚合组ID&#xa;no description //如果配置了描述&#xa;description 描述 //如果配置了描述&#xa;switchport mode trunkinterface vlan 1&#xa;dhcp server 1&#xa; ip address ip mask" style="whiteSpace=wrap;fontSize=10;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
+        <mxCell id="_etaKtDSM-wvSbGmYz5o-57" value="interface &quot;agg&quot;+聚合组ID&#xa;no description //如果配置了描述&#xa;description 描述 //如果配置了描述&#xa;switchport mode trunk&#xa;interface vlan 1&#xa;dhcp server 1&#xa; ip address ip mask" style="whiteSpace=wrap;fontSize=10;fillColor=#BC6C25;strokeColor=#DDA15E;fontColor=#FEFAE0;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
           <mxGeometry x="1060" y="505" width="300" height="160" as="geometry" />
         </mxCell>
         <mxCell id="_etaKtDSM-wvSbGmYz5o-58" value="CONVERGE_RECOVER: &#xa;    RECYCLING + 聚合 + (核心或汇聚 且 2个以上端口)&#xa;    RECYCLING + 聚合 + 有带宽回收vlan + (网吧 且 3个以上端口 且 有业务接入端口)&#xa;    RECYCLING + 聚合 + 没带宽回收vlan + (网吧 且 2个以上端口)&#xa;&#xa;RECOVER: &#xa;    RECYCLING + 无聚合 + (核心或汇聚 且 只能一个端口)&#xa;    RECYCLING + 无聚合 + 有带宽回收vlan + (网吧 且 只能2个端口 且 有业务接入端口)&#xa;    RECYCLING + 无聚合 + 没带宽回收vlan + (网吧 且 只能1个端口)" style="shape=note;whiteSpace=wrap;backgroundOutline=1;darkOpacity=0.05;strokeColor=#DDA15E;fontSize=10;fontColor=#FEFAE0;fillColor=none;align=left;labelBackgroundColor=#999900;" vertex="1" parent="_etaKtDSM-wvSbGmYz5o-1">
