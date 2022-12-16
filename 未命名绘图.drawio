@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-12-16T07:25:23.238Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="068tYemJIexBWCbeXZCF" version="20.6.2" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2022-12-16T07:43:38.016Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="e_U5YuZmq7D0xmmq9c5i" version="20.6.2" type="github" pages="5">
   <diagram id="KCGnJsf7bXrOIoNxbifd" name="portModel">
-    <mxGraphModel dx="1070" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
+    <mxGraphModel dx="-94" dy="384" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#283618" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -491,12 +491,65 @@
     </mxGraphModel>
   </diagram>
   <diagram id="bO9DgsLWtpnPfF_cRcS2" name="单通道模式">
-    <mxGraphModel dx="1897" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="973" dy="384" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="KWx0cEF-d_MwEUVEPM_t-2" value="no description //如果配置了描述&#xa;description 描述 //如果配置了描述&#xa;no switchport&#xa;dhcp-server 1&#xa;ip address ip mask" style="shape=note;whiteSpace=wrap;backgroundOutline=1;darkOpacity=0.05;labelBackgroundColor=none;strokeColor=#DDA15E;fontColor=#FEFAE0;fillColor=#BC6C25;fontSize=22;" vertex="1" parent="1">
           <mxGeometry x="250" y="180" width="401" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="28v8Xk1cEE0LsV8EfLpc" name="mlag">
+    <mxGraphModel dx="973" dy="384" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="7YB78JUPmJnRMOuLnpeU-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" edge="1" parent="1" source="uD2Gaslk6GzAMqh35baZ-1" target="7YB78JUPmJnRMOuLnpeU-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uD2Gaslk6GzAMqh35baZ-1" value="&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;企业+单链路&lt;/div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 18px; line-height: 24px;&quot;&gt;（无聚合）&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;strokeColor=#FF6392;strokeWidth=1;fontSize=22;fontColor=#5AA9E6;fillColor=#FFE45E;" vertex="1" parent="1">
+          <mxGeometry x="200" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dC_dDJvBp6y1lusFdU1p-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" edge="1" parent="1" source="7YB78JUPmJnRMOuLnpeU-2" target="dC_dDJvBp6y1lusFdU1p-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7YB78JUPmJnRMOuLnpeU-2" value="只能选一个端口" style="whiteSpace=wrap;html=1;fontSize=22;fillColor=#FFE45E;strokeColor=#FF6392;fontColor=#5AA9E6;rounded=1;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dC_dDJvBp6y1lusFdU1p-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" edge="1" parent="1" source="dC_dDJvBp6y1lusFdU1p-1" target="dC_dDJvBp6y1lusFdU1p-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dC_dDJvBp6y1lusFdU1p-1" value="配VLAN" style="whiteSpace=wrap;html=1;fontSize=22;fillColor=#FFE45E;strokeColor=#FF6392;fontColor=#5AA9E6;rounded=1;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xCAv91BcyLsRwRvQ-k32-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" edge="1" parent="1" source="dC_dDJvBp6y1lusFdU1p-3" target="xCAv91BcyLsRwRvQ-k32-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dC_dDJvBp6y1lusFdU1p-3" value="配VLANIF" style="whiteSpace=wrap;html=1;fontSize=22;fillColor=#FFE45E;strokeColor=#FF6392;fontColor=#5AA9E6;rounded=1;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wof7LfeDhepq8mi3tugj-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" edge="1" parent="1" source="xCAv91BcyLsRwRvQ-k32-1" target="wof7LfeDhepq8mi3tugj-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xCAv91BcyLsRwRvQ-k32-1" value="&lt;span style=&quot;color: rgb(254, 250, 224); font-size: 12px;&quot;&gt;端口初始化&lt;/span&gt;" style="whiteSpace=wrap;html=1;fontSize=22;fillColor=#FFE45E;strokeColor=#FF6392;fontColor=#5AA9E6;rounded=1;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="660" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wof7LfeDhepq8mi3tugj-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" edge="1" parent="1" source="wof7LfeDhepq8mi3tugj-1" target="wof7LfeDhepq8mi3tugj-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wof7LfeDhepq8mi3tugj-1" value="端口切trunk&lt;br&gt;配default vlan, permit vlan" style="whiteSpace=wrap;html=1;fontSize=22;fillColor=#FFE45E;strokeColor=#FF6392;fontColor=#5AA9E6;rounded=1;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="800" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wof7LfeDhepq8mi3tugj-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF6392;fontColor=#5AA9E6;fillColor=#FFE45E;" edge="1" parent="1" source="wof7LfeDhepq8mi3tugj-3" target="wof7LfeDhepq8mi3tugj-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wof7LfeDhepq8mi3tugj-3" value="环路检测" style="whiteSpace=wrap;html=1;fontSize=22;fillColor=#FFE45E;strokeColor=#FF6392;fontColor=#5AA9E6;rounded=1;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="970" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wof7LfeDhepq8mi3tugj-5" value="ARP白名单" style="whiteSpace=wrap;html=1;fontSize=22;fillColor=#FFE45E;strokeColor=#FF6392;fontColor=#5AA9E6;rounded=1;labelBackgroundColor=none;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1110" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
